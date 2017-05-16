@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-class NilPayloadMessaging < Slackistrano::Messaging::Default
+class NilPayloadMessaging < DefaultWebhook
   def payload_for_updating
     nil
   end

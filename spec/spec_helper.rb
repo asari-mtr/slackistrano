@@ -21,3 +21,10 @@ end
 
 # Silence rake's '** Execute…' output
 Rake.application.options.trace = false
+
+class DefaultWebhook < Slackistrano::Messaging::Default
+  def initialize(env: nil, team: nil, channel: nil, token: nil, webhook: "http://somewhere")
+    super
+  end
+end
+
